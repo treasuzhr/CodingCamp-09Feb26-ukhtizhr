@@ -12,11 +12,13 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    flex-wrap: wrap;
 }
 
 nav.flex {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 nav.flex a {
@@ -34,13 +36,31 @@ nav.flex a {
     background-image: url(https://raw.githubusercontent.com/treasuzhr/lumineatelier-assets/main/quality_restoration_20260214034559621.jpg.jpeg);
     background-size: cover;
     flex-shrink: 0;
+    margin-bottom: 10px;
 }
 
 #user-greeting {
-    font-size: 30px;
+    font-size: 20px;
     color: #000000;
     font-family: sans-serif;
     font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav.flex {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    nav.flex a {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
 }
 
 #home-page {
@@ -161,6 +181,8 @@ nav.flex a {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
+    flex: nowrap;
+    align-items: flex-start;
 }
 
 .input-group {
@@ -170,7 +192,11 @@ nav.flex a {
     gap: 8px;
 }
 
-.form-wrapper, .result-wrapper { flex: 1; }
+.form-wrapper, .result-wrapper {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+ }
 
 .result-wrapper {
     margin-top: 60px;
@@ -188,6 +214,14 @@ button[type="submit"] {
     background-color: #fff;
     border-radius: 15px;
     min-height: 250px;
+}
+
+@media screen and (max-width: 768px) {
+    .message-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+    }
 }
 
 footer {

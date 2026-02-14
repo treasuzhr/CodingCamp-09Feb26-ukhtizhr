@@ -4,22 +4,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lumine Atelier</title>
     
     <!-- CSS External -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <!--Header Content-->
-    <header></header>
+    <header>
+        <div class="logo-group">
+            <div class="logo"></div>
+            <span id="user-greeting"></span>
+        </div>
+
+        <!-- Navigation Menu -->
+         <nav class="flex">
+            <a class="border rounded p-2" href="#home-page">Home</a>
+            <a class="border rounded p-2" href="#our-profile-page">Our Profile</a>
+            <a class="border rounded p-2" href="#our-workshops-page">Our Workshops</a>
+            <a class="border rounded p-2" href="#message-us-page">Message Us</a>
+         </nav>
+    </header>
 
     <!--Main Content-->
-    <main></main>
+    <main>
+        <!-- Home Page -->
+         <section id="home-page">
+            <h1 id="welcome-speech">Welcome to Lumine Atelier</h1>
+            <p>A Space to Create & Shine</p>
+         </section>
+
+         <hr>
+
+        <!-- Our Profile Page -->
+         <section id="our-profile-page">
+            <h2 class="profile-title">Our Profile</h2>
+            <!-- About -->
+             <div class="about-company">
+                <h2>𐦂𖨆  About Lumine Atelier  𐀪𖠋</h2>
+                <p>Lumine Atelier is a creative art and craft studio offering inspiring workshops in painting, crochet, air-dry clay crafting, and miniature cake decorating.<br>
+                   We provide a warm and welcoming space where individuals of all ages can explore their creativity, develop new skills, and enjoy meaningful hands-on experiences through art.</p>
+             </div>
+
+             <!-- Vision -->
+             <div class="vision">
+                <h2>Vision</h2>
+                <p>To become a leading creative studio that inspires individuals to express themselves confidently through art and craftsmanship</p>
+             </div>
+
+             <!-- Mission -->
+              <div class="mission">
+                <h2>Mission</h2>
+                <ul>
+                        <li>To provide high-quality and engaging art & craft workshops.</li>
+                        <li>To create a supportive and inclusive creative community.</li>
+                        <li>To encourage self-expression and skill development through hands-on learning.</li>
+                        <li>To nurture creativity in a warm and inspiring environment.</li>
+                </ul>
+              </div>
+         </section>
+
+         <hr>
+
+         <!-- Our Workshops -->
+          <section id="our-workshops-page">
+            <h2 class="ws-title">Our Workshops</h2>
+
+            <div class="workshop-list">
+
+                <div class="ws-item">
+                    <h3 class="ws-name">Canvas Painting</h3>
+                    <div class="ws-image img-painting"></div>
+                </div>
+
+                <div class="ws-item">
+                    <h3 class="ws-name">Cozy Crochet Art</h3>
+                    <div class="ws-image img-crochet"></div>
+                </div>
+
+                <div class="ws-item">
+                    <h3 class="ws-name">Bento Cake Decorating</h3>
+                    <div class="ws-image img-bento"></div>
+                </div>
+
+                <div class="ws-item">
+                    <h3 class="ws-name">Hands-on Clay Crafting</h3>
+                    <div class="ws-image img-clay"></div>
+                </div>
+            </div>
+          </section>
+
+          <hr>
+
+          <!-- Message Us Page -->
+           <section id="message-us-page">
+            <div class="message-container">
+
+                <div class="form-wrapper">
+                    <h2>Message Us</h2>
+                    <form id="contact-form">
+                        <div class="input-group">
+                            <label>Nama:</label>
+                            <input type="text" id="input-name" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Email:</label>
+                            <input type="email" id="input-email" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Pesan:</label>
+                            <textarea id="input-message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="result-wrapper">
+                    <div id="display-box">
+                        <p><strong>Current time:</strong> <span id="current-time">-</span></p>
+                        <p><strong>Nama:</strong> <span id="output-name">-</span></p>
+                        <p><strong>Email :</strong> <span id="output-email">-</span></p>
+                        <p><strong>Pesan:</strong> <span id="output-message">-</span></p>
+                    </div>
+                </div>
+            </div>
+           </section>
+    </main>
 
     <!--Footer Content-->
-    <footer></footer>
-    
+    <footer>
+        <hr />
+        <p>&copy; 2026 Lumine Atelier. All rights reserved.</p>
+    </footer>
+
     <!-- JavaScript External -->
     <script src="js/script.js"></script>
 </body>
